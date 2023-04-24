@@ -22,18 +22,18 @@ class FishingApplication extends Application {
 
     // Settings data
     this.fish = {
-      jumpRange: 100, // Jumping range, between 0-100, lower means less movement
-      speed: 1000, // Movement speed in ms
+      jumpRange: 75, // Jumping range, between 0-100, lower means less movement
+      speed: 800, // Movement speed in ms
       depth: 20, // Spawn starting percentage
-      movepremsec: 1500, // How often the Fish changes position
+      movepremsec: 1800, // How often the Fish changes position
       codEmperor: false, // Is the fish the mythical Cod Emperor?
     };
     this.rod = {
       reeling: false,
-      reelPower: 10, // Bait move speed. Higher = easier
-      baitWeight: 1, // Bait weight. Lower = Faster
-      progress: 2, // Progress gain percentage per interval
-      progressPenalty: 0, // Progress loss percentage per interval
+      reelPower: 15, // Bait move speed. Higher = easier
+      baitWeight: 2, // Bait weight. Lower = Faster
+      progress: 3, // Progress gain percentage per interval
+      progressPenalty: 1, // Progress loss percentage per interval
       progressUpdateRate: 200, // Progress bar update rate
       progressUpdated: false
     }
@@ -43,7 +43,7 @@ class FishingApplication extends Application {
     if (result === 1002) {
       this.fish.speed = 500;
       this.fish.movepremsec = 2000;
-      this.rod.progress = 1;
+      this.rod.progress = 3;
       this.rod.progressPenalty = 2;
       this.fish.codEmperor = true;
       ui.notifications.warn("You have encountered the mythical Cod Emperor - prepare for a fight!");
